@@ -1,35 +1,39 @@
 # Unity-echo3D-Demo-MusicMaker
 Compose music by clicking different instruments and be a rockstar for a day!
 
-## Version
-[Unity 2021.2.7f1](https://unity3d.com/get-unity/download/archive)
-
-## Register
-Don't have an echo3D API key? Make sure to register for FREE at [echo3D](https://console.echo3D.co/#/auth/register).
-
 ## Setup
-* Clone this [repo](https://github.com/Echo3D/Unity-echo3D-Demo-MusicMaker/).
-* [Install the echo3D Unity SDK](https://docs.echo3D.co/unity/installation).
-* Open the _MusicScene_ scene.
-* [Set the API key](https://docs.echo3D.co/unity/using-the-sdk) in the Inspector of the echo3D game object.
-* [Add the 3 instrument images](https://docs.echo3D.co/quickstart/add-a-3d-model) from the [Models](./Models) folder to the echo3D console.
-* [Add the metadata for each instrument to match](https://docs.echo3D.co/web-console/manage-pages/data-page/how-to-add-data#adding-metadata)<br>
-    Drum: xAngle: 90, yAngle: 180, scale: .06, x: -2<br>
-    Guitar: xAngle: 90, yAngle: 180, scale: .06, x: -11<br>
-    Piano: xAngle: 90, yAngle: 180, scale: .06, x: -7<br>
+* Built with Unity 2020.3.25.  _(Note: The echo3D Unity SDK is supported in 2020.3.25 and higher.)_
+* Register for FREE at [echo3D](https://console.echo3D.co/#/auth/register).
+* [Add the Unity SDK](https://medium.com/r/?url=https%3A%2F%2Fdocs.echo3d.co%2Funity%2Finstallation). Troubleshoot [here](https://docs.echo3d.com/unity/troubleshooting#im-getting-a-newtonsoft.json.dll-error-in-unity).
+* Clone this repo. 
 
-* Add API keys and entry IDs to each echo3D prefab in the Hierarchy
-![APIKeyandEntryId](https://user-images.githubusercontent.com/99516371/167982548-946fe69e-f40e-4a2f-a88d-21213ff834f8.png)<br>
-![APIKEYS](https://user-images.githubusercontent.com/99516371/167980212-89774e29-adfe-4fd8-a6a3-f71ceb4af6ee.png)
+## Steps
+* [Add these models](https://docs.echo3D.co/quickstart/add-a-3d-model) to the echo3D console from the Unity Assets/Models folder:  <br>
+      - DrumFramed<br>
+      - GuitarFramed<br>
+      - PianoFramed<br>
+* Open the _MusicScene_ scene.
+* [Set the API key](https://docs.echo3d.co/quickstart/access-the-console) and Entry IDs for those same models in the Inspector. <br>
+![APIKeyandEntryId](https://user-images.githubusercontent.com/99516371/195749269-f7a43477-b67a-49e8-a212-6abdb9c948fd.png)<br>
+![NEWAPIKeyandEntryID](https://user-images.githubusercontent.com/99516371/205407613-b746840f-8e8a-4ec8-b056-a680395dfab4.png)<br>
+* [Type your Secret Key](https://docs.echo3d.co/web-console/deliver-pages/security-page#secret-key) as the value for the parameter secKey in the file Packages/co.echo3D.unity/Runtime/Echo3DHologram.cs. _(Note: Secret Key only matters if you have the Security Key enabled). You can turn it off in the Security options in your echo3D console._
+![NEWSecKey2](https://user-images.githubusercontent.com/99516371/195749308-b2349a3b-7e43-4d3c-8f09-fbfa9d3cb0be.png)<br>
+* (Recommended) To move, resize or edit the assets live in your Scene view, check the boxes for “Editor Preview” and “Ignore Model Transforms”. To enable this, click Echo3D > Load Editor Holograms in your Unity toolbar. <br>
+![EditorPreviewAndIgnoreModelTransforms](https://user-images.githubusercontent.com/99516371/195749348-dc0b06ad-efa6-4dbd-962f-0119b5c33ea0.png)<br>
+![LoadHolograms](https://user-images.githubusercontent.com/99516371/195749354-b2295183-f877-444a-af22-ed87ffb17705.png) <br>
+
 
 ## Run
-Simply press the _Play_ button in Unity and click on each instrument to play and stop music.
+Press the _Play_ button in Unity and click on each instrument to play and stop music.
 
 ## Learn more
 Refer to our [documentation](https://docs.echo3D.co/unity/) to learn more about how to use Unity and echo3D.
 
 ## Support
 Feel free to reach out at [support@echo3D.co](mailto:support@echo3D.co) or join our [support channel on Slack](https://go.echo3D.co/join). 
+
+## Troubleshooting
+Visit our troubleshooting guide [here](https://docs.echo3d.co/unity/troubleshooting#im-getting-a-newtonsoft.json.dll-error-in-unity).
 
 ## Sources
 * [Guitar audio](https://www.bensound.com/royalty-free-music/track/acoustic-breeze)
